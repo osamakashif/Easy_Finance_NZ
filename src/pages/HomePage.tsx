@@ -18,9 +18,9 @@ export const HomePage = () => {
                 {pages.map((page) => (
                     <NavLink to={'/' + page} style={{ textDecoration: "none", paddingBottom: "5%" }} key={page}>
                         <Grid item >
-                            <Card variant="outlined" style={{ height: "15em", borderRadius: "2em", background: "aliceblue" }}>
+                            <Card variant="outlined" style={{ height: "12em", borderRadius: "2em", background: "aliceblue" }}>
                                 <CardContent >
-                                    <Typography variant="h4" textAlign={"center"} paddingTop={"25%"} width={"10em"}>
+                                    <Typography variant="h4" textAlign={"center"} paddingTop={"25%"} width={"8em"}>
                                         {page}
                                     </Typography>
                                 </CardContent>
