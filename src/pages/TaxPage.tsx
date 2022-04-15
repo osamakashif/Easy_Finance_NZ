@@ -1,5 +1,6 @@
 import { FormControl, Grid, InputAdornment, InputLabel, OutlinedInput, Typography } from "@mui/material";
 import { useState } from "react";
+import { calculateNZBusinessTax, calculateNZEmployeeTax } from "../functions/taxes";
 
 export const TaxPage = () => {
     const [businessIncome, setBusinessIncome] = useState<number>(0);
@@ -24,7 +25,7 @@ export const TaxPage = () => {
                 </Grid>
                 <Grid item xs={12} sm={4}>
                     <Typography variant="h5">Business Income: $ {businessIncome}</Typography>
-                    <Typography variant="h5">Tax to pay: $ TOCONNECTWITHFUNCTION</Typography>
+                    <Typography variant="h5">Tax to pay: $ {calculateNZBusinessTax(businessIncome)}</Typography>
                 </Grid>
             </Grid>
             <Typography variant="h3" textAlign={"center"} paddingTop={"2%"} paddingBottom={"2%"}>Employment Tax NZ</Typography>
@@ -43,7 +44,7 @@ export const TaxPage = () => {
                 </Grid>
                 <Grid item xs={12} sm={4}>
                     <Typography variant="h5">Employment Income: $ {employmentIncome}</Typography>
-                    <Typography variant="h5">Tax to pay: $ TOCONNECTWITHFUNCTION</Typography>
+                    <Typography variant="h5">Tax to pay: $ {calculateNZEmployeeTax(employmentIncome)}</Typography>
                 </Grid>
             </Grid>
         </>
