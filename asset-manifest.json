@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Easy_Finance_NZ/static/css/main.e6c13ad2.css",
-    "main.js": "/Easy_Finance_NZ/static/js/main.b6cdb062.js",
+    "main.js": "/Easy_Finance_NZ/static/js/main.6fe5c98e.js",
     "static/js/787.02e59921.chunk.js": "/Easy_Finance_NZ/static/js/787.02e59921.chunk.js",
     "index.html": "/Easy_Finance_NZ/index.html",
     "main.e6c13ad2.css.map": "/Easy_Finance_NZ/static/css/main.e6c13ad2.css.map",
-    "main.b6cdb062.js.map": "/Easy_Finance_NZ/static/js/main.b6cdb062.js.map",
+    "main.6fe5c98e.js.map": "/Easy_Finance_NZ/static/js/main.6fe5c98e.js.map",
     "787.02e59921.chunk.js.map": "/Easy_Finance_NZ/static/js/787.02e59921.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.b6cdb062.js"
+    "static/js/main.6fe5c98e.js"
   ]
 }
