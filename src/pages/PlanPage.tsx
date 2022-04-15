@@ -1,5 +1,8 @@
 import { FormControl, Grid, InputAdornment, InputLabel, OutlinedInput, Typography } from "@mui/material";
 import { useState } from "react";
+import { minIdealIncomeForTotalCosts, point2, point3 } from "../functions/budgeting";
+import { targetIncomeAsNZBusiness, targetIncomeAsNZEmployee } from "../functions/targeting";
+import { calculateNZBusinessTax, calculateNZEmployeeTax } from "../functions/taxes";
 
 export const PlanPage = () => {
     const [targetBusinessIncome, setTargetBusinessIncome] = useState<number>(0);
@@ -26,13 +29,13 @@ export const PlanPage = () => {
             </Grid>
             <Grid container spacing={2} justifyContent="space-around">
                 <Grid item xs={12} sm={3}>
-                    <Typography variant="h5">Amount desired: $ {targetBusinessIncome}</Typography>
+                    <Typography variant="h5">Total value to earn: $ {targetIncomeAsNZBusiness(targetBusinessIncome)}</Typography>
                 </Grid>
                 <Grid item xs={12} sm={3}>
-                    <Typography variant="h5">Total value to earn: $ TOCONNECTWITHFUNCTION</Typography>
+                    <Typography variant="h5">Tax to pay: $ {calculateNZBusinessTax(targetIncomeAsNZBusiness(targetBusinessIncome))}</Typography>
                 </Grid>
                 <Grid item xs={12} sm={3}>
-                    <Typography variant="h5">Tax to pay: $ TOCONNECTWITHFUNCTION</Typography>
+                    <Typography variant="h5">Desired amount (left after tax): $ {targetBusinessIncome}</Typography>
                 </Grid>
             </Grid>
             <Typography variant="h3" textAlign={"center"} paddingTop={"2%"} paddingBottom={"2%"}>Employmnet Target NZ</Typography>
@@ -52,13 +55,13 @@ export const PlanPage = () => {
             </Grid>
             <Grid container spacing={2} justifyContent="space-around">
                 <Grid item xs={12} sm={3}>
-                    <Typography variant="h5">Amount desired: $ {targetEmploymentIncome}</Typography>
+                    <Typography variant="h5">Total value to earn: $ {targetIncomeAsNZEmployee(targetEmploymentIncome)}</Typography>
                 </Grid>
                 <Grid item xs={12} sm={3}>
-                    <Typography variant="h5">Total value to earn: $ TOCONNECTWITHFUNCTION</Typography>
+                    <Typography variant="h5">Tax to pay: $ {calculateNZEmployeeTax(targetIncomeAsNZEmployee(targetEmploymentIncome))}</Typography>
                 </Grid>
                 <Grid item xs={12} sm={3}>
-                    <Typography variant="h5">Tax to pay: $ TOCONNECTWITHFUNCTION</Typography>
+                    <Typography variant="h5">Desired amount (left after tax): $ {targetEmploymentIncome}</Typography>
                 </Grid>
             </Grid>
             <Typography variant="h3" textAlign={"center"} paddingTop={"2%"} paddingBottom={"2%"}>Budget target</Typography>
@@ -81,7 +84,7 @@ export const PlanPage = () => {
                     <Typography variant="h5">Total costs: $ {costs}</Typography>
                 </Grid>
                 <Grid item xs={12} sm={4}>
-                    <Typography variant="h5">Tax to pay: $ TOCONNECTWITHFUNCTION</Typography>
+                    <Typography variant="h5">Minimum to earn after tax: $ {minIdealIncomeForTotalCosts(costs)}</Typography>
                 </Grid>
             </Grid>
             <Typography variant="h4" textAlign={"center"} paddingTop={"2%"} paddingBottom={"2%"}>50-30-20 Split</Typography>
@@ -92,11 +95,11 @@ export const PlanPage = () => {
                 </Grid>
                 <Grid item xs={12} sm={3}>
                     <Typography variant="h5">Wants: 30%</Typography>
-                    <Typography variant="h5">Value set aside for wants: $ TOCONNECTWITHFUNCTION</Typography>
+                    <Typography variant="h5">Value set aside for wants: $ {point3(minIdealIncomeForTotalCosts(costs))}</Typography>
                 </Grid>
                 <Grid item xs={12} sm={3}>
                     <Typography variant="h5">Savings: 20%</Typography>
-                    <Typography variant="h5">Value set aside for savings: $ TOCONNECTWITHFUNCTION</Typography>
+                    <Typography variant="h5">Value set aside for savings: $ {point2(minIdealIncomeForTotalCosts(costs))}</Typography>
                 </Grid>
             </Grid>
         </>
