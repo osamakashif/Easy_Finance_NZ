@@ -1,5 +1,6 @@
 import { FormControl, Grid, InputAdornment, InputLabel, OutlinedInput, Typography } from "@mui/material";
 import { useState } from "react";
+import { point2, point3, point5 } from "../functions/budgeting";
 
 export const BudgetPage = () => {
     const [income, setIncome] = useState<number>(0);
@@ -25,15 +26,15 @@ export const BudgetPage = () => {
             <Grid container spacing={2} justifyContent="space-around">
                 <Grid item xs={12} sm={3}>
                     <Typography variant="h5">Expenses: 50%</Typography>
-                    <Typography variant="h5">Value set aside for expenses: $ TOCONNECTWITHFUNCTION</Typography>
+                    <Typography variant="h5">Value set aside for expenses: $ {point5(income)}</Typography>
                 </Grid>
                 <Grid item xs={12} sm={3}>
                     <Typography variant="h5">Wants: 30%</Typography>
-                    <Typography variant="h5">Value set aside for wants: $ TOCONNECTWITHFUNCTION</Typography>
+                    <Typography variant="h5">Value set aside for wants: $ {point3(income)}</Typography>
                 </Grid>
                 <Grid item xs={12} sm={3}>
                     <Typography variant="h5">Savings: 20%</Typography>
-                    <Typography variant="h5">Value set aside for savings: $ TOCONNECTWITHFUNCTION</Typography>
+                    <Typography variant="h5">Value set aside for savings: $ {point2(income)}</Typography>
                 </Grid>
             </Grid>
         </>
