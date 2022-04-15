@@ -1,6 +1,7 @@
 {
   "name": "easy_finance_nz",
   "version": "1.0.0",
+  "homepage": "https://osamakashif.github.io/Easy_Finance_NZ/",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.8.1",
@@ -22,6 +23,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
