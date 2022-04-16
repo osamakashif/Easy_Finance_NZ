@@ -28,13 +28,13 @@ export const PlanPage = () => {
                 </Grid>
             </Grid>
             <Grid container spacing={2} justifyContent="space-around">
-                <Grid item xs={12} sm={3}>
+                <Grid item xs={10} lg={3}>
                     <Typography variant="h5">Total value to earn: ${targetIncomeAsNZBusiness(targetBusinessIncome)}</Typography>
                 </Grid>
-                <Grid item xs={12} sm={3}>
+                <Grid item xs={10} lg={3}>
                     <Typography variant="h5">Tax to pay: ${calculateNZBusinessTax(targetIncomeAsNZBusiness(targetBusinessIncome))}</Typography>
                 </Grid>
-                <Grid item xs={12} sm={3}>
+                <Grid item xs={10} lg={3}>
                     <Typography variant="h5">Desired amount (left after tax): ${targetBusinessIncome}</Typography>
                 </Grid>
             </Grid>
@@ -54,13 +54,13 @@ export const PlanPage = () => {
                 </Grid>
             </Grid>
             <Grid container spacing={2} justifyContent="space-around">
-                <Grid item xs={12} sm={3}>
+                <Grid item xs={10} lg={3}>
                     <Typography variant="h5">Total value to earn: ${targetIncomeAsNZEmployee(targetEmploymentIncome)}</Typography>
                 </Grid>
-                <Grid item xs={12} sm={3}>
+                <Grid item xs={10} lg={3}>
                     <Typography variant="h5">Tax to pay: ${calculateNZEmployeeTax(targetIncomeAsNZEmployee(targetEmploymentIncome))}</Typography>
                 </Grid>
-                <Grid item xs={12} sm={3}>
+                <Grid item xs={10} lg={3}>
                     <Typography variant="h5">Desired amount (left after tax): ${targetEmploymentIncome}</Typography>
                 </Grid>
             </Grid>
@@ -80,24 +80,24 @@ export const PlanPage = () => {
                 </Grid>
             </Grid>
             <Grid container spacing={4} justifyContent="space-evenly">
-                <Grid item xs={12} sm={4}>
+                <Grid item xs={10} lg={4}>
                     <Typography variant="h5">Total costs: ${costs}</Typography>
                 </Grid>
-                <Grid item xs={12} sm={4}>
+                <Grid item xs={10} lg={4}>
                     <Typography variant="h5">Minimum to earn after tax: ${minIdealIncomeForTotalCosts(costs)}</Typography>
                 </Grid>
             </Grid>
             <Typography variant="h4" textAlign={"center"} paddingTop={"2%"} paddingBottom={"2%"}>50-30-20 Split</Typography>
             <Grid container spacing={2} justifyContent="space-around">
-                <Grid item xs={12} sm={3}>
+                <Grid item xs={10} lg={3}>
                     <Typography variant="h5">Expenses: 50%</Typography>
                     <Typography variant="h5">Value set aside for expenses: ${costs}</Typography>
                 </Grid>
-                <Grid item xs={12} sm={3}>
+                <Grid item xs={10} lg={3}>
                     <Typography variant="h5">Wants: 30%</Typography>
                     <Typography variant="h5">Value set aside for wants: ${point3(minIdealIncomeForTotalCosts(costs))}</Typography>
                 </Grid>
-                <Grid item xs={12} sm={3}>
+                <Grid item xs={10} lg={3}>
                     <Typography variant="h5">Savings: 20%</Typography>
                     <Typography variant="h5">Value set aside for savings: ${point2(minIdealIncomeForTotalCosts(costs))}</Typography>
                 </Grid>

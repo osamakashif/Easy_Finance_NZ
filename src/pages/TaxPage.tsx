@@ -23,7 +23,7 @@ export const TaxPage = () => {
                         />
                     </FormControl>
                 </Grid>
-                <Grid item xs={12} sm={4}>
+                <Grid item xs={10} sm={4}>
                     <Typography variant="h5">Business Income: ${businessIncome}</Typography>
                     <Typography variant="h5">Tax to pay: ${calculateNZBusinessTax(businessIncome)}</Typography>
                 </Grid>
@@ -42,7 +42,7 @@ export const TaxPage = () => {
                         />
                     </FormControl>
                 </Grid>
-                <Grid item xs={12} sm={4}>
+                <Grid item xs={10} sm={4}>
                     <Typography variant="h5">Employment Income: ${employmentIncome}</Typography>
                     <Typography variant="h5">Tax to pay: ${calculateNZEmployeeTax(employmentIncome)}</Typography>
                 </Grid>
