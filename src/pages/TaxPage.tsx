@@ -8,8 +8,8 @@ export const TaxPage = () => {
     
     return (
         <>
-            <Typography variant="h1" textAlign={"center"} paddingTop={"2%"}>Tax</Typography>
-            <Typography variant="h3" textAlign={"center"} paddingTop={"2%"} paddingBottom={"2%"}>Business Tax NZ</Typography>
+            <Typography variant="h1" textAlign={"center"} paddingTop={"5%"}>Tax</Typography>
+            <Typography variant="h3" textAlign={"center"} paddingTop={"5%"} paddingBottom={"5%"}>Business Tax NZ</Typography>
             <Grid container spacing={4} justifyContent="space-around">
                 <Grid item xs={12} sm={4} display="flex">
                     <FormControl fullWidth sx={{ m: 1 }}>
@@ -23,12 +23,12 @@ export const TaxPage = () => {
                         />
                     </FormControl>
                 </Grid>
-                <Grid item xs={12} sm={4}>
-                    <Typography variant="h5">Business Income: $ {businessIncome}</Typography>
-                    <Typography variant="h5">Tax to pay: $ {calculateNZBusinessTax(businessIncome)}</Typography>
+                <Grid item xs={10} sm={4}>
+                    <Typography variant="h5">Business Income: ${businessIncome}</Typography>
+                    <Typography variant="h5">Tax to pay: ${calculateNZBusinessTax(businessIncome)}</Typography>
                 </Grid>
             </Grid>
-            <Typography variant="h3" textAlign={"center"} paddingTop={"2%"} paddingBottom={"2%"}>Employment Tax NZ</Typography>
+            <Typography variant="h3" textAlign={"center"} paddingTop={"5%"} paddingBottom={"5%"}>Employment Tax NZ</Typography>
             <Grid container spacing={4} justifyContent="space-around">
                 <Grid item xs={12} sm={4} display="flex">
                     <FormControl fullWidth sx={{ m: 1 }}>
@@ -42,9 +42,9 @@ export const TaxPage = () => {
                         />
                     </FormControl>
                 </Grid>
-                <Grid item xs={12} sm={4}>
-                    <Typography variant="h5">Employment Income: $ {employmentIncome}</Typography>
-                    <Typography variant="h5">Tax to pay: $ {calculateNZEmployeeTax(employmentIncome)}</Typography>
+                <Grid item xs={10} sm={4}>
+                    <Typography variant="h5">Employment Income: ${employmentIncome}</Typography>
+                    <Typography variant="h5">Tax to pay: ${calculateNZEmployeeTax(employmentIncome)}</Typography>
                 </Grid>
             </Grid>
         </>
