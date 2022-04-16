@@ -7,7 +7,7 @@ export const BudgetPage = () => {
 
     return (
         <>
-            <Typography variant="h1" textAlign={"center"} paddingTop={"2%"} paddingBottom={"2%"}>Budget</Typography>
+            <Typography variant="h1" textAlign={"center"} paddingTop={"5%"} paddingBottom={"5%"}>Budget</Typography>
             <Grid container spacing={2} justifyContent="space-around">
                 <Grid item xs={12} sm={4} display="flex">
                     <FormControl fullWidth sx={{ m: 1 }}>
@@ -22,7 +22,7 @@ export const BudgetPage = () => {
                     </FormControl>
                 </Grid>
             </Grid>
-            <Typography variant="h3" textAlign={"center"} paddingTop={"2%"} paddingBottom={"2%"}>50-30-20 Split</Typography>
+            <Typography variant="h3" textAlign={"center"} paddingTop={"5%"} paddingBottom={"5%"}>50-30-20 Split</Typography>
             <Grid container spacing={2} justifyContent="space-around">
                 <Grid item xs={10} lg={3}>
                     <Typography variant="h5">Expenses: 50%</Typography>
