@@ -26,15 +26,15 @@ export const BudgetPage = () => {
             <Grid container spacing={2} justifyContent="space-around">
                 <Grid item xs={12} sm={3}>
                     <Typography variant="h5">Expenses: 50%</Typography>
-                    <Typography variant="h5">Value set aside for expenses: $ {point5(income)}</Typography>
+                    <Typography variant="h5">Value set aside for expenses: ${point5(income)}</Typography>
                 </Grid>
                 <Grid item xs={12} sm={3}>
                     <Typography variant="h5">Wants: 30%</Typography>
-                    <Typography variant="h5">Value set aside for wants: $ {point3(income)}</Typography>
+                    <Typography variant="h5">Value set aside for wants: ${point3(income)}</Typography>
                 </Grid>
                 <Grid item xs={12} sm={3}>
                     <Typography variant="h5">Savings: 20%</Typography>
-                    <Typography variant="h5">Value set aside for savings: $ {point2(income)}</Typography>
+                    <Typography variant="h5">Value set aside for savings: ${point2(income)}</Typography>
                 </Grid>
             </Grid>
         </>
